@@ -60,4 +60,4 @@ jobs:
                   clean: true
                   single-commit: true
                   token: ${{ secrets.action }}
-                  repository-name: 你的用户名/你的用户名.github.io
+                  repository-name: luoxiaobin001/luoxiaobin001.github.io
