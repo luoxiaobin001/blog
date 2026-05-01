@@ -1,0 +1,10 @@
+baseURL = "https://luoxiaobin001.github.io/"
+languageCode = "zh-cn"
+title = "我的 Hugo 博客"
+theme = "PaperMod"
+
+# 开启 Draft 模式预览（部署时会自动忽略 draft: true 的文章）
+buildDrafts = true
+
+[params]
+  description = "一个使用 GitHub Actions 自动部署的 Hugo 博客"
