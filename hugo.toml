@@ -7,4 +7,4 @@ theme = "PaperMod"
 buildDrafts = true
 
 [params]
-  description = "一个使用 GitHub Actions 自动部署的 Hugo 博客"
+ description = "一个使用 GitHub Actions 自动部署的 Hugo 博客"
