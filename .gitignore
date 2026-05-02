@@ -1,73 +1,41 @@
-```markdown
-# Compiled and build artifacts
-*.pyc
-__pycache__/
-*.o
-*.obj
-dist/
-build/
-target/
-*.class
-*.exe
-*.dll
-*.so
-*.a
-*.out
+```
+# Hugo build artifacts
+public/
+.hugo_build.lock
 
 # Dependencies
-.venv/
-venv/
+node_modules/
+
+# Environment
 .env
 .env.local
 .env.*
-node_modules/
-.julia/
-zig*/
-.jupyter/
-.ipython/
-.mypy_cache/
-.pytest_cache/
-.coverage
-coverage/
-htmlcov/
 
-# Logs and temp files
+# Logs
 *.log
-*.tmp
-*.swp
-*.swo
 
-# Editors
+# Editor/IDE
 .vscode/
 .idea/
 *.swp
 *.swo
+*.tmp
 
-# System files
+# OS
 .DS_Store
 Thumbs.db
 
-# Compressed files
-*.zip
-*.gz
-*.tar
-*.tgz
-*.bz2
-*.xz
-*.7z
-*.rar
-*.zst
-*.lz4
-*.lzh
-*.cab
-*.arj
-*.rpm
-*.deb
-*.Z
-*.lz
-*.lzo
-*.tar.gz
-*.tar.bz2
-*.tar.xz
-*.tar.zst
+# Build/cache
+build/
+dist/
+target/
+__pycache__/
+*.pyc
+.mypy_cache/
+.pytest_cache/
+coverage/
+htmlcov/
+.coverage
+.jekyll-cache
+.sass-cache
 ```
