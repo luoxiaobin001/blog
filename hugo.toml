@@ -77,7 +77,7 @@ summaryLength = 70
     url = "/index.xml"
   
   # 搜索功能
-  [[paramsfuseOptions]]
+  [params.fuseOptions]
     includeScore = true
   [params.search]
     disableIndex = false
