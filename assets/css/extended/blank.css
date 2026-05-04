@@ -3,3 +3,140 @@ This is just a placeholder blank stylesheet so as to support adding custom style
 
 Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-css-with-themes-assets for more info
 */
+
+/* Import elegant print-style fonts - 引入优雅的印刷体字体 */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+/* Apply print-style fonts globally - 全局应用印刷体字体 */
+body {
+    font-family: 'EB Garamond', 'Crimson Text', Georgia, 'Times New Roman', serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #2c2c2c;
+}
+
+/* Article content - 文章内容 */
+.post-content, .content {
+    font-family: 'EB Garamond', 'Crimson Text', Georgia, serif;
+    font-size: 19px;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+}
+
+/* Headings - 标题 */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Crimson Text', 'EB Garamond', Georgia, serif;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: #1a1a1a;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.3em;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+/* Code blocks keep monospace - 代码块保持等宽字体 */
+code, pre, .highlight {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
+}
+
+/* Inline code - 行内代码 */
+p code, li code {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    background: var(--code-bg);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+/* Blockquotes - 引用块 */
+blockquote {
+    font-family: 'Crimson Text', 'EB Garamond', Georgia, serif;
+    font-style: italic;
+    border-left: 4px solid #d4af37;
+    padding-left: 1.5em;
+    color: #555;
+    background: rgba(212, 175, 55, 0.05);
+    padding: 1em 1.5em;
+    margin: 1.5em 0;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Floating Table of Contents - 悬浮式目录 */
+@media (min-width: 1200px) {
+    details.toc {
+        position: fixed;
+        top: 100px;
+        right: calc((100vw - 1200px) / 2 + 20px);
+        width: 280px;
+        max-height: calc(100vh - 120px);
+        overflow-y: auto;
+        z-index: 100;
+        margin-bottom: 0;
+        scroll-behavior: smooth;
+        font-family: 'Crimson Text', Georgia, serif;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border: 1px solid #e8e8e8;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    details.toc .inner {
+        margin: 0;
+        padding: 0.6rem 1rem;
+    }
+
+    details.toc summary {
+        font-family: 'Crimson Text', Georgia, serif;
+        font-weight: 600;
+        font-size: 1.1rem;
+        cursor: pointer;
+        padding: 0.5rem 0;
+    }
+
+    /* Adjust main content to prevent overlap */
+    .post-single {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    /* Custom scrollbar for TOC */
+    details.toc::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    details.toc::-webkit-scrollbar-track {
+        background: var(--code-bg);
+        border-radius: var(--radius);
+    }
+
+    details.toc::-webkit-scrollbar-thumb {
+        background: var(--border);
+        border-radius: var(--radius);
+    }
+
+    details.toc::-webkit-scrollbar-thumb:hover {
+        background: var(--secondary);
+    }
+}
+
+/* Hide TOC on smaller screens - keep original behavior */
+@media (max-width: 1199px) {
+    details.toc {
+        position: static;
+        width: 100%;
+        max-height: none;
+    }
+}
