@@ -81,21 +81,22 @@ summaryLength = 70
     includeScore = true
   [params.search]
     disableIndex = false
-  
-  # 评论系统 (可选)
-  # [params.comments]
-  #   provider = "giscus"
-  #   [params.comments.giscus]
-  #     repo = "username/repo"
-  #     repoId = ""
-  #     category = "General"
-  #     categoryId = ""
-  #     mapping = "pathname"
-  #     strict = "0"
-  #     reactionsEnabled = "1"
-  #     emitMetadata = "0"
-  #     inputPosition = "bottom"
-  #     lang = "zh-CN"
+
+  # 评论系统 - Giscus
+  [params.comments]
+    provider = "giscus"
+    [params.comments.giscus]
+      repo = "luoxiaobin001/blog"
+      repoId = ""
+      category = "General"
+      categoryId = ""
+      mapping = "pathname"
+      strict = "0"
+      reactionsEnabled = "1"
+      emitMetadata = "0"
+      inputPosition = "bottom"
+      lang = "zh-CN"
+      theme = "light"
 
 # 输出格式配置
 [outputs]
