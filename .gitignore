@@ -1,3 +1,4 @@
+```
 # Dependencies
 node_modules/
 venv/
@@ -10,38 +11,30 @@ build/
 target/
 .gradle/
 
-# Editors
-.vscode/
-.idea/
+# Logs and temp files
+*.log
+*.tmp
 *.swp
-*.swo
 
-# System
-.DS_Store
-Thumbs.db
+# Environment
 .env
 .env.local
 *.env.*
 
-# Logs and temp files
-*.log
-*.tmp
+# Editors
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Coverage
 coverage/
 htmlcov/
 .coverage
 
-# Compiled files
-*.pyc
-*.class
-*.o
-*.exe
-*.dll
-*.so
-*.a
-*.obj
-*.out
-
-# Archives
+# Compressed files
 *.zip
 *.gz
 *.tar
@@ -64,3 +57,4 @@ htmlcov/
 *.tar.bz2
 *.tar.xz
 *.tar.zst
+```
