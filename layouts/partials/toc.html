@@ -1,8 +1,8 @@
 {{- $headers := findRE "<h[1-6].*?>(.|\n])+?</h[1-6]>" .Content -}}
 {{- $has_headers := ge (len $headers) 1 -}}
 {{- if $has_headers -}}
-<div class="toc-sticky">
-    <div class="toc-title">{{- i18n "toc" | default "Table of Contents" }}</div>
+<details class="toc-sticky" open>
+    <summary class="toc-title">{{- i18n "toc" | default "Table of Contents" }}</summary>
     <nav class="toc-nav">
         {{- if (.Param "UseHugoToc") }}
         {{- .TableOfContents -}}
@@ -88,5 +88,5 @@
         </ul>
         {{- end }}
     </nav>
-</div>
+</details>
 {{- end }}

@@ -228,7 +228,6 @@ h1>a>svg {
     top: 80px;
     align-self: flex-start;
     max-height: calc(100vh - 100px);
-    overflow-y: auto;
 }
 
 .toc-sticky {
@@ -240,6 +239,47 @@ h1>a>svg {
 
 [data-theme="dark"] .toc-sticky {
     background: var(--entry);
+}
+
+.toc-sticky summary {
+    list-style: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+    color: var(--content);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toc-sticky summary::-webkit-details-marker {
+    display: none;
+}
+
+.toc-sticky summary::after {
+    content: "−";
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--secondary);
+}
+
+.toc-sticky[open] summary::after {
+    content: "−";
+}
+
+.toc-sticky:not([open]) summary::after {
+    content: "+";
+}
+
+.toc-sticky[open] .toc-nav {
+    display: block;
+}
+
+.toc-sticky:not([open]) .toc-nav {
+    display: none;
 }
 
 .toc-title {
