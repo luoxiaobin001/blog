@@ -1,32 +1,43 @@
-```
-# Build artifacts
-public/
-resources/
-.hugo_build.lock
-
-# Cache
-.cache/
-.sass-cache/
-
-# Logs
-*.log
-
-# Environment
-.env
-.env.local
-*.env.*
-
 # Dependencies
 node_modules/
 vendor/
+bower_components/
 
-# Editors
+# Build artifacts
+dist/
+build/
+public/
+.hugo_build.lock
+
+# Logs
+*.log
+logs/
+
+# Environment variables
+.env
+.env.local
+.env.*
+!.env.example
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
 
-# OS
-.DS_Store
-Thumbs.db
-```
+# Hugo specific
+resources/_gen/
+stats.json
+
+# Theme specific
+themes/PaperMod/.git/
