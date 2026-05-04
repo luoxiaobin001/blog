@@ -218,13 +218,15 @@ h1>a>svg {
 .post-single-wrapper {
     display: flex;
     position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .toc-sidebar {
     position: fixed;
     left: 0;
     top: 80px;
-    width: 220px;
+    width: 200px;
     max-height: calc(100vh - 100px);
     overflow-y: auto;
     z-index: 100;
@@ -243,7 +245,7 @@ h1>a>svg {
 .toc-sticky {
     background: transparent;
     border: none;
-    padding: 0 0 0 1.5rem;
+    padding: 0 0 0 1rem;
 }
 
 [data-theme="dark"] .toc-sticky {
@@ -339,8 +341,9 @@ h1>a>svg {
 .post-single {
     flex: 1;
     min-width: 0;
-    margin-left: 220px;
-    padding-left: 2rem;
+    margin-left: 200px;
+    padding-left: 3rem;
+    max-width: 900px;
 }
 
 @media (max-width: 900px) {
