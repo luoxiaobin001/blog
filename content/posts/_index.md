@@ -5,11 +5,10 @@ date = 2024-05-04T00:00:00+08:00
 draft = false
 
 # 列表页面配置
-cascade:
-  - params:
-      ShowReadingTime: true
-      ShowWordCount: true
-      ShowBreadCrumbs: true
+[[cascade]]
+params.ShowReadingTime = true
+params.ShowWordCount = true
+params.ShowBreadCrumbs = true
 
 # 排序方式
 sort_by = "Date"
