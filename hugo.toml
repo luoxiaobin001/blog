@@ -87,9 +87,9 @@ summaryLength = 70
     provider = "giscus"
     [params.comments.giscus]
       repo = "luoxiaobin001/blog"
-      repoId = ""
-      category = "General"
-      categoryId = ""
+      repoId = "R_kgDOSSLMNw"
+      category = "Q&A"
+      categoryId = "DIC_kwDOSSLMN84C8R8m"
       mapping = "pathname"
       strict = "0"
       reactionsEnabled = "1"
