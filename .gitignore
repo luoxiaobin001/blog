@@ -1,63 +1,47 @@
 # Dependencies
 node_modules/
-vendor/
-bower_components/
-
-# Build artifacts
+venv/
+.venv/
+__pycache__/
+.mypy_cache/
+.pytest_cache/
 dist/
 build/
 target/
-out/
-public/
+.gradle/
 
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-env/
-venv/
-.venv/
-.env
-.env.local
-.env.
-.python-version
-.pytest_cache/
-.mypy_cache/
-.coverage
-htmlcov/
-
-# Logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-Thumbs.db:encryptable
-
-# IDE
+# Editors
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
 
-# Temporary files
+# System
+.DS_Store
+Thumbs.db
+.env
+.env.local
+*.env.*
+
+# Logs and temp files
+*.log
 *.tmp
-*.temp
-*.bak
-*.backup
+coverage/
+htmlcov/
+.coverage
 
-# Compressed files
+# Compiled files
+*.pyc
+*.class
+*.o
+*.exe
+*.dll
+*.so
+*.a
+*.obj
+*.out
+
+# Archives
 *.zip
 *.gz
 *.tar
@@ -80,26 +64,3 @@ Thumbs.db:encryptable
 *.tar.bz2
 *.tar.xz
 *.tar.zst
-
-# Coverage
-coverage/
-lcov.info
-
-# Environment specific
-.env
-.env.local
-.env.dev
-.env.production
-.env.test
-.env.staging
-
-# Hugo/Static site
-resources/_gen/
-*.mp
-public/
-.netlify/
-netlify/
-
-# Theme specific
-themes/*/dist/
-themes/*/.git/

@@ -214,45 +214,55 @@ h1>a>svg {
     display: inline;
 }
 
-/* Table of Contents - Sticky Sidebar Layout */
+/* Table of Contents - Fixed Left Sidebar Layout */
 .post-single-wrapper {
     display: flex;
-    gap: 40px;
     position: relative;
 }
 
 .toc-sidebar {
-    flex-shrink: 0;
-    width: 250px;
-    position: sticky;
+    position: fixed;
+    left: 0;
     top: 80px;
-    align-self: flex-start;
+    width: 220px;
     max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    z-index: 100;
+}
+
+/* Hide scrollbar but keep functionality */
+.toc-sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+.toc-sidebar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
 .toc-sticky {
-    background: var(--code-bg);
-    border-radius: var(--radius);
-    border: 1px solid var(--border);
-    padding: 1rem;
+    background: transparent;
+    border: none;
+    padding: 0 0 0 1.5rem;
 }
 
 [data-theme="dark"] .toc-sticky {
-    background: var(--entry);
+    background: transparent;
 }
 
 .toc-sticky summary {
     list-style: none;
     cursor: pointer;
-    font-weight: 600;
-    font-size: 16px;
-    margin-bottom: 1rem;
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 0.8rem;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--border);
     color: var(--content);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: 0.3px;
 }
 
 .toc-sticky summary::-webkit-details-marker {
@@ -261,9 +271,10 @@ h1>a>svg {
 
 .toc-sticky summary::after {
     content: "−";
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     color: var(--secondary);
+    opacity: 0.7;
 }
 
 .toc-sticky[open] summary::after {
@@ -283,12 +294,13 @@ h1>a>svg {
 }
 
 .toc-title {
-    font-weight: 600;
-    font-size: 16px;
-    margin-bottom: 1rem;
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 0.8rem;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--border);
     color: var(--content);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: 0.3px;
 }
 
 .toc-nav ul {
@@ -298,32 +310,37 @@ h1>a>svg {
 }
 
 .toc-nav li {
-    margin: 0.5rem 0;
+    margin: 0.4rem 0;
 }
 
 .toc-nav a {
     color: var(--secondary);
-    font-size: 14px;
+    font-size: 13px;
     text-decoration: none;
     display: block;
-    padding: 0.25rem 0;
-    transition: color 0.2s ease;
+    padding: 0.3rem 0;
+    transition: all 0.2s ease;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
 }
 
 .toc-nav a:hover {
     color: var(--primary);
-    text-decoration: underline;
+    transform: translateX(3px);
 }
 
 .toc-nav ul ul {
-    margin-inline-start: 1rem;
-    border-inline-start: 1px solid var(--border);
-    padding-inline-start: 0.75rem;
+    margin-inline-start: 0.8rem;
+    padding-inline-start: 0.6rem;
+    border-inline-start: 1px solid rgba(128, 128, 128, 0.2);
 }
 
 .post-single {
     flex: 1;
     min-width: 0;
+    margin-left: 220px;
+    padding-left: 2rem;
 }
 
 @media (max-width: 900px) {
@@ -335,9 +352,16 @@ h1>a>svg {
         width: 100%;
         position: static;
         max-height: none;
+        margin-bottom: 1rem;
     }
 
     .toc-sticky {
         position: static;
+        padding-left: 0;
+    }
+
+    .post-single {
+        margin-left: 0;
+        padding-left: 0;
     }
 }
