@@ -225,9 +225,9 @@ h1>a>svg {
 .toc-sidebar {
     position: fixed;
     left: 50%;
-    transform: translateX(-700px);
+    transform: translateX(-580px);
     top: 80px;
-    width: 180px;
+    width: 160px;
     max-height: calc(100vh - 100px);
     overflow-y: auto;
     z-index: 100;
@@ -342,14 +342,14 @@ h1>a>svg {
 .post-single {
     flex: 1;
     min-width: 0;
-    padding-left: 2rem;
+    padding-left: 1rem;
     max-width: 850px;
 }
 
 @media (max-width: 1200px) {
     .toc-sidebar {
         left: 50%;
-        transform: translateX(-600px);
+        transform: translateX(-480px);
     }
 }
 
