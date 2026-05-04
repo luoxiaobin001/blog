@@ -2,10 +2,11 @@
 # Build artifacts
 public/
 resources/
+.hugo_build.lock
 
-# Dependencies
-node_modules/
-vendor/
+# Cache
+.cache/
+.sass-cache/
 
 # Logs
 *.log
@@ -14,6 +15,10 @@ vendor/
 .env
 .env.local
 *.env.*
+
+# Dependencies
+node_modules/
+vendor/
 
 # Editors
 .vscode/
@@ -24,72 +29,4 @@ vendor/
 # OS
 .DS_Store
 Thumbs.db
-
-# Coverage
-coverage/
-htmlcov/
-.coverage
-
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-*.so
-*.egg-info/
-.eggs/
-.dist-info/
-
-# Go
-*.exe
-*.dll
-*.so
-*.dylib
-
-# Java
-*.class
-*.jar
-*.war
-*.ear
-*.nar
-target/
-.gradle/
-build/
-
-# JavaScript
-dist/
-build/
-coverage/
-.nyc_output/
-*.tsbuildinfo
-.next/
-.nuxt/
-.vuepress/dist
-.output
-
-# Rust
-target/
-
-# Temporary files
-*.tmp
-*.temp
-*.bak
-*.backup
-
-# Compressed files
-*.zip
-*.gz
-*.tar
-*.tgz
-*.bz2
-*.xz
-*.7z
-*.rar
-*.Z
-*.lz
-*.lzo
-*.tar.gz
-*.tar.bz2
-*.tar.xz
 ```

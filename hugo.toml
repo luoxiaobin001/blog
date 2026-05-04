@@ -37,6 +37,11 @@ summaryLength = 70
     name = "分类"
     url = "/categories/"
     weight = 4
+  [[menu.main]]
+    identifier = "search"
+    name = "搜索"
+    url = "/search/"
+    weight = 5
 
 [params]
   description = "一个使用 GitHub Actions 自动部署的 Hugo 博客"
@@ -76,11 +81,18 @@ summaryLength = 70
     name = "rss"
     url = "/index.xml"
   
-  # 搜索功能
+  # 搜索功能配置
+  [params.search]
+    Home = true
+    Hybrid = true
   [params.fuseOptions]
     includeScore = true
-  [params.search]
-    disableIndex = false
+    includeMatches = true
+    threshold = 0
+    location = 0
+    distance = 100
+    minMatchCharLength = 1
+    keys = ["title", "permalink", "summary", "content"]
 
   # 评论系统 - Giscus
   [params.comments]
