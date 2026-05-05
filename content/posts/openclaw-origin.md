@@ -1,6 +1,6 @@
 ---
 title: "Openclaw 起源：从灵感到开源项目的诞生"
-date: 2026-05-05T11:24:22+08:00
+date: 2026-05-05T12:47:54+08:00
 draft: false
 tags: ["Openclaw", "Open Source", "History", "Technology"]
 categories: ["Project History"]
