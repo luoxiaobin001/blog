@@ -40,9 +40,8 @@
 
   {{- if .Content }}
   <div class="post-content md-content">
-    {{- /* 如果存在 Description 或 summary，且内容中包含 <!--more--> 标签，则只显示 more 之后的内容 */}}
-    {{- if and (or .Description .Summary) (in .RawContent "<!--more-->") }}
-      {{- $content := .Content }}
+    {{- /* 如果存在 <!--more--> 标签，则只显示 more 之后的内容 */}}
+    {{- if in .RawContent "<!--more-->" }}
       {{- $morePos := strings.Index .RawContent "<!--more-->" }}
       {{- if gt $morePos 0 }}
         {{- $afterMore := substr .RawContent (add $morePos 12) }}
