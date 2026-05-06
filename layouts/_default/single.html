@@ -42,10 +42,9 @@
   <div class="post-content md-content">
     {{- /* 如果存在 <!--more--> 标签，则只显示 more 之后的内容 */}}
     {{- if in .RawContent "<!--more-->" }}
-      {{- $morePos := strings.Index .RawContent "<!--more-->" }}
-      {{- if gt $morePos 0 }}
-        {{- $afterMore := substr .RawContent (add $morePos 12) }}
-        {{- $afterMore | markdownify }}
+      {{- $parts := split .RawContent "<!--more-->" }}
+      {{- if gt (len $parts) 1 }}
+        {{- index $parts 1 | markdownify }}
       {{- else }}
         {{- if not (.Param "disableAnchoredHeadings") }}
           {{- partial "anchored_headings.html" .Content -}}
