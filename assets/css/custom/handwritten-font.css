@@ -1,0 +1,69 @@
+/* 手写印刷风格字体 - Custom Handwritten Font */
+
+/* 导入 Google Fonts 的手写风格字体 */
+@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;500;600;700&family=ZCOOL+KuaiLe&display=swap');
+
+/* 全局字体设置 - 使用手写印刷风格 */
+body {
+    font-family: 'Noto Serif SC', 'Ma Shan Zheng', 'ZCOOL KuaiLe', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+}
+
+/* 文章标题 - 使用更具书法感的字体 */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Ma Shan Zheng', 'Noto Serif SC', serif !important;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.post-title {
+    font-family: 'Ma Shan Zheng', 'Noto Serif SC', serif !important;
+    font-size: 42px;
+    letter-spacing: 2px;
+}
+
+/* 文章正文内容 - 使用优雅的宋体风格 */
+.post-content,
+.post-content p,
+.post-content li,
+.post-content blockquote {
+    font-family: 'Noto Serif SC', 'Ma Shan Zheng', serif !important;
+    font-size: 17px;
+    line-height: 1.9;
+    letter-spacing: 0.5px;
+}
+
+/* 代码块保持等宽字体 */
+code,
+pre,
+.highlight {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
+}
+
+/* 元数据信息 */
+.post-meta,
+.breadcrumbs,
+.post-tags a {
+    font-family: 'Noto Serif SC', serif !important;
+}
+
+/* 目录导航 */
+.toc-sticky summary,
+.toc-title,
+.toc-nav a {
+    font-family: 'Noto Serif SC', serif !important;
+}
+
+/* 引用块 - 增加手写感 */
+blockquote {
+    font-family: 'Ma Shan Zheng', 'Noto Serif SC', serif !important;
+    border-left-color: #d4a5a5;
+    background: rgba(212, 165, 165, 0.05);
+}
+
+/* 深色模式适配 */
+[data-theme="dark"] blockquote {
+    background: rgba(212, 165, 165, 0.08);
+    border-left-color: #c98a8a;
+}

@@ -53,6 +53,9 @@ summaryLength = 70
   author = "博主"
   images = ["images/avatar.png"]
   
+  # 自定义 CSS - 手写印刷风格字体
+  customCSS = ["css/custom/handwritten-font.css"]
+
   # 显示设置
   ShowReadingTime = true
   ShowShareButtons = true
