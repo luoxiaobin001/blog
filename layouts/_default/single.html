@@ -44,7 +44,8 @@
     {{- if in .RawContent "<!--more-->" }}
       {{- $parts := split .RawContent "<!--more-->" }}
       {{- if gt (len $parts) 1 }}
-        {{- index $parts 1 | markdownify }}
+        {{- $contentAfterMore := index $parts 1 }}
+        {{- $contentAfterMore | markdownify }}
       {{- else }}
         {{- if not (.Param "disableAnchoredHeadings") }}
           {{- partial "anchored_headings.html" .Content -}}
