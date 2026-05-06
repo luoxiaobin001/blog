@@ -40,9 +40,23 @@
 
   {{- if .Content }}
   <div class="post-content md-content">
-    {{- if not (.Param "disableAnchoredHeadings") }}
-    {{- partial "anchored_headings.html" .Content -}}
-    {{- else }}{{ .Content }}{{ end }}
+    {{- /* 如果存在 Description 或 summary，且内容中包含 <!--more--> 标签，则只显示 more 之后的内容 */}}
+    {{- if and (or .Description .Summary) (in .RawContent "<!--more-->") }}
+      {{- $content := .Content }}
+      {{- $morePos := strings.Index .RawContent "<!--more-->" }}
+      {{- if gt $morePos 0 }}
+        {{- $afterMore := substr .RawContent (add $morePos 12) }}
+        {{- $afterMore | markdownify }}
+      {{- else }}
+        {{- if not (.Param "disableAnchoredHeadings") }}
+          {{- partial "anchored_headings.html" .Content -}}
+        {{- else }}{{ .Content }}{{ end }}
+      {{- end }}
+    {{- else }}
+      {{- if not (.Param "disableAnchoredHeadings") }}
+        {{- partial "anchored_headings.html" .Content -}}
+      {{- else }}{{ .Content }}{{ end }}
+    {{- end }}
   </div>
   {{- end }}
 
